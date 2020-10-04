@@ -92,7 +92,10 @@ namespace WinFormsApp1
 
         private void changeSign_Click(object sender, EventArgs e)
         {
-            currentValue.Text = (Convert.ToDouble(currentValue.Text) * -1).ToString();
+            if (currentValue.Text != "")
+            {
+                currentValue.Text = (Convert.ToDouble(currentValue.Text) * -1).ToString();
+            }
         }
 
         private void division_Click(object sender, EventArgs e)
@@ -117,17 +120,21 @@ namespace WinFormsApp1
 
         private void equal_Click(object sender, EventArgs e)
         {
-            Calculate();
-            prevValue.Text = "";
-            operandValue.Text = "";
+            if (currentValue.Text != "")
+            {
+                Calculate();
+                prevValue.Text = "";
+                operandValue.Text = "";
+            }
         }
         
         private void AddDigit(string digit)
         {
-            if (digit == "," && currentValue.Text.Contains(","))
+            if (!Validate(digit))
             {
                 return;
             }
+            
             if (currentValue.Text == @"Error")
             {
                 currentValue.Text = digit;
@@ -139,7 +146,10 @@ namespace WinFormsApp1
 
         private void AddOperand(string operand)
         {
-            if (prevValue.Text != "")
+            if (prevValue.Text != "" && currentValue.Text == "")
+            {
+                operandValue.Text = operand;
+            } else if (prevValue.Text != "")
             {
                 Calculate();
                 prevValue.Text = currentValue.Text;
@@ -151,13 +161,36 @@ namespace WinFormsApp1
                 currentValue.Text = "";
                 operandValue.Text = operand;
             }
-            
         }
+        
+        private bool Validate(string value)
+        {
+            if (prevValue.Text == @"Error")
+            {
+                currentValue.Text = @"Error";
+                prevValue.Text = "";
+                operandValue.Text = "";
+                return false;
+            }
+            if (value == "," && currentValue.Text.Contains(","))
+            {
+                return false;
+            }
+
+            if (value == @"0" && currentValue.Text == @"0")
+            {
+                return false;
+            }
+
+            return true;
+        }
+        
 
         private void Calculate()
         {
             var curVal = Convert.ToDouble(currentValue.Text);
             var prevVal = Convert.ToDouble(prevValue.Text);
+            Console.WriteLine("test" + curVal);
             switch (operandValue.Text)
             {
                 case "+":
