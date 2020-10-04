@@ -4,7 +4,14 @@
     <projectFile>WinFormsApp1/WinFormsApp1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d9dc2f-87f7-47d0-ac23-8515585b70fe" name="Default Changelist" comment="" />
+    <list default="true" id="71d9dc2f-87f7-47d0-ac23-8515585b70fe" name="Default Changelist" comment="Replaced dot with comma">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WinFormsApp1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WinFormsApp1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WinFormsApp1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WinFormsApp1/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WinFormsApp1/bin/Debug/netcoreapp3.1/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WinFormsApp1/bin/Debug/netcoreapp3.1/WinFormsApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WinFormsApp1/bin/Debug/netcoreapp3.1/WinFormsApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WinFormsApp1/bin/Debug/netcoreapp3.1/WinFormsApp1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WinFormsApp1/obj/Debug/netcoreapp3.1/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WinFormsApp1/obj/Debug/netcoreapp3.1/WinFormsApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WinFormsApp1/obj/Debug/netcoreapp3.1/WinFormsApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WinFormsApp1/obj/Debug/netcoreapp3.1/WinFormsApp1.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,8 +76,16 @@
       <workItem from="1601801228219" duration="302000" />
       <workItem from="1601801708748" duration="2997000" />
       <workItem from="1601804919161" duration="4831000" />
-      <workItem from="1601809800475" duration="3356000" />
+      <workItem from="1601809800475" duration="3665000" />
     </task>
+    <task id="LOCAL-00001" summary="Replaced dot with comma">
+      <created>1601813281633</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601813281633</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,24 +95,34 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Replaced dot with comma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced dot with comma" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="123" key="GridCell.Tab.0.bottom" timestamp="1601812917668">
+    <state x="628" y="403" width="467" height="219" key="Github.ShareDialog" timestamp="1601813124228">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601812917668" />
-    <state width="1877" height="123" key="GridCell.Tab.0.center" timestamp="1601812917668">
+    <state x="628" y="403" width="467" height="219" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601813124228" />
+    <state x="735" y="226" key="Github.UntrackedFilesDialog" timestamp="1601813140974">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601812917668" />
-    <state width="1877" height="123" key="GridCell.Tab.0.left" timestamp="1601812917667">
+    <state x="735" y="226" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601813140974" />
+    <state width="1877" height="123" key="GridCell.Tab.0.bottom" timestamp="1601813208073">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601812917667" />
-    <state width="1877" height="123" key="GridCell.Tab.0.right" timestamp="1601812917668">
+    <state width="1877" height="123" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601813208073" />
+    <state width="1877" height="123" key="GridCell.Tab.0.center" timestamp="1601813208072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601812917668" />
+    <state width="1877" height="123" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601813208072" />
+    <state width="1877" height="123" key="GridCell.Tab.0.left" timestamp="1601813208072">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="123" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601813208072" />
+    <state width="1877" height="123" key="GridCell.Tab.0.right" timestamp="1601813208073">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="123" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601813208073" />
     <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1601802435994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -162,6 +187,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601802435995" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601813286301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601813286301" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1601812807017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

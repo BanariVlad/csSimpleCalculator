@@ -170,7 +170,7 @@ namespace WinFormsApp1
                     currentValue.Text = (prevVal * curVal).ToString();
                     break;
                 case "÷":
-                    currentValue.Text = curVal != 0 ? (prevVal * curVal).ToString() : "Error";
+                    currentValue.Text = curVal != 0 ? (prevVal / curVal).ToString() : "Error";
                     break;
                 default: currentValue.Text = @"Error";
                     break;
