@@ -24,7 +24,7 @@ namespace WinFormsApp1
         {
             AddDigit(zero.Text);
         }
-        
+
         private void one_Click(object sender, EventArgs e)
         {
             AddDigit(one.Text);
@@ -69,11 +69,12 @@ namespace WinFormsApp1
         {
             AddDigit(nine.Text);
         }
-        
+
         private void dot_Click(object sender, EventArgs e)
         {
             AddDigit(dot.Text);
         }
+
 
         private void clearAll_Click(object sender, EventArgs e)
         {
@@ -120,25 +121,24 @@ namespace WinFormsApp1
 
         private void equal_Click(object sender, EventArgs e)
         {
-            if (currentValue.Text != "")
-            {
-                Calculate();
-                prevValue.Text = "";
-                operandValue.Text = "";
-            }
+            var valid = currentValue.Text != "" && currentValue.Text != @"," && currentValue.Text != @"Error" &&
+                        prevValue.Text != "";
+            if (!valid) return;
+
+            Calculate();
+            prevValue.Text = "";
+            operandValue.Text = "";
         }
-        
+
         private void AddDigit(string digit)
         {
-            if (!Validate(digit))
-            {
-                return;
-            }
-            
+            if (!Validate(digit)) return;
+
             if (currentValue.Text == @"Error")
             {
                 currentValue.Text = digit;
-            } else if (currentValue.Text.Length < 16)
+            }
+            else if (currentValue.Text.Length < 16)
             {
                 currentValue.Text += digit;
             }
@@ -149,20 +149,22 @@ namespace WinFormsApp1
             if (prevValue.Text != "" && currentValue.Text == "")
             {
                 operandValue.Text = operand;
-            } else if (prevValue.Text != "")
+            }
+            else if (prevValue.Text != "")
             {
                 Calculate();
                 prevValue.Text = currentValue.Text;
                 operandValue.Text = operand;
                 currentValue.Text = "";
-            } else if (currentValue.Text != "")
+            }
+            else if (currentValue.Text != "" && currentValue.Text != @"Error")
             {
                 prevValue.Text = currentValue.Text;
                 currentValue.Text = "";
                 operandValue.Text = operand;
             }
         }
-        
+
         private bool Validate(string value)
         {
             if (prevValue.Text == @"Error")
@@ -172,42 +174,33 @@ namespace WinFormsApp1
                 operandValue.Text = "";
                 return false;
             }
-            if (value == "," && currentValue.Text.Contains(","))
-            {
-                return false;
-            }
-
-            if (value == @"0" && currentValue.Text == @"0")
+            if (value == "," && currentValue.Text.Contains(",") || value != @"," && currentValue.Text == @"0")
             {
                 return false;
             }
 
             return true;
         }
-        
+
 
         private void Calculate()
         {
+            if (currentValue.Text == @"0" && operandValue.Text == @"÷")
+            {
+                currentValue.Text = @"Error";
+                operandValue.Text = "";
+                prevValue.Text = "";
+            }
             var curVal = Convert.ToDouble(currentValue.Text);
             var prevVal = Convert.ToDouble(prevValue.Text);
-            Console.WriteLine("test" + curVal);
-            switch (operandValue.Text)
+            currentValue.Text = operandValue.Text switch
             {
-                case "+":
-                    currentValue.Text = (curVal + prevVal).ToString();
-                    break;
-                case "-":
-                    currentValue.Text = (prevVal - curVal).ToString();
-                    break;
-                case "x":
-                    currentValue.Text = (prevVal * curVal).ToString();
-                    break;
-                case "÷":
-                    currentValue.Text = curVal != 0 ? (prevVal / curVal).ToString() : "Error";
-                    break;
-                default: currentValue.Text = @"Error";
-                    break;
-            }
+                "+" => (curVal + prevVal).ToString(),
+                "-" => (prevVal - curVal).ToString(),
+                "x" => (prevVal * curVal).ToString(),
+                "÷" => curVal != 0 ? (prevVal / curVal).ToString() : "Error",
+                _ => @"Error"
+            };
         }
     }
 }

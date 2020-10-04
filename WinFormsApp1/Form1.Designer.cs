@@ -496,7 +496,6 @@ namespace WinFormsApp1
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (29)))), ((int) (((byte) (41)))), ((int) (((byte) (58)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CancelButton = this.clearAll;
             this.ClientSize = new System.Drawing.Size(227, 384);
             this.Controls.Add(this.operandValue);
             this.Controls.Add(this.one);
