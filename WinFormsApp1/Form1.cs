@@ -124,11 +124,11 @@ namespace WinFormsApp1
         
         private void AddDigit(string digit)
         {
-            if (digit == "." && currentValue.Text.Contains("."))
+            if (digit == "," && currentValue.Text.Contains(","))
             {
                 return;
             }
-            if (currentValue.Text == "Error")
+            if (currentValue.Text == @"Error")
             {
                 currentValue.Text = digit;
             } else if (currentValue.Text.Length < 16)
