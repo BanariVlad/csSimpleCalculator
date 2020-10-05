@@ -157,7 +157,7 @@ namespace WinFormsApp1
                 operandValue.Text = operand;
                 currentValue.Text = "";
             }
-            else if (currentValue.Text != "" && currentValue.Text != @"Error")
+            else if (currentValue.Text != "" && currentValue.Text != @"Error" && currentValue.Text != @",")
             {
                 prevValue.Text = currentValue.Text;
                 currentValue.Text = "";
