@@ -85,7 +85,10 @@ namespace WinFormsApp1
 
         private void clearOne_Click(object sender, EventArgs e)
         {
-            if (currentValue.Text != "")
+            if (currentValue.Text == @"Error")
+            {
+                clearAll_Click(sender, e);
+            } else if (currentValue.Text != "")
             {
                 currentValue.Text = currentValue.Text.Remove(currentValue.Text.Length - 1);
             }
@@ -93,7 +96,7 @@ namespace WinFormsApp1
 
         private void changeSign_Click(object sender, EventArgs e)
         {
-            if (currentValue.Text != "")
+            if (currentValue.Text != "" && currentValue.Text != @"," && currentValue.Text != @"Error")
             {
                 currentValue.Text = (Convert.ToDouble(currentValue.Text) * -1).ToString();
             }
@@ -150,7 +153,7 @@ namespace WinFormsApp1
             {
                 operandValue.Text = operand;
             }
-            else if (prevValue.Text != "")
+            else if (prevValue.Text != "" && currentValue.Text != @",")
             {
                 Calculate();
                 prevValue.Text = currentValue.Text;
@@ -185,12 +188,7 @@ namespace WinFormsApp1
 
         private void Calculate()
         {
-            if (currentValue.Text == @"0" && operandValue.Text == @"÷")
-            {
-                currentValue.Text = @"Error";
-                operandValue.Text = "";
-                prevValue.Text = "";
-            }
+            
             var curVal = Convert.ToDouble(currentValue.Text);
             var prevVal = Convert.ToDouble(prevValue.Text);
             currentValue.Text = operandValue.Text switch
